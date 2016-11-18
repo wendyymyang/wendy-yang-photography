@@ -1,0 +1,71 @@
+.loader {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: block;
+	opacity: 0.7;
+	background-color: #fff;
+	z-index: 99;
+	text-align: center;
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		z-index: 100;
+	}
+}
+
+header {
+	background-image: linear-gradient($transparent-white, $transparent-white) ,url('./images/cloud-background.jpeg');
+	background-position: center;
+	background-size: cover;
+	height: 320px;
+	.wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		h1 a {
+			color: $mineshaft;
+			font-family: $montserrat;
+			font-weight: 700;
+			font-size: 6rem;
+			letter-spacing: 1px;
+		}
+		h4 {
+			margin-top: 20px;
+			font-family: $montserrat;
+			font-weight: 400;
+			color: $light-gray;
+			font-size: 1.5rem;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+// Media Queries
+
+@media (max-width: 480px) {
+	header {
+		.wrapper {
+			h1 a {
+				font-size: 5rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 414px) {
+	header {
+		.wrapper {
+			h4 {
+				padding: 20px;
+			}
+		}
+	}
+}
